@@ -1,0 +1,67 @@
+\section{Aktivita}
+\label{kap_aktivita}
+Aktivita aktivačního detektoru je veličina, která vyjadřuje počet přeměn jeho atomových jader za jednotku času. Matematicky lze celkovou aktivitu vzorku zapsat následovně
+
+\begin{equation}
+    \label{rov301}
+    A = \sum_{r=1}^{R}{A_{r}} = \sum_{r=1}^{R}{- \frac{d\mathcal{N}_{r}}{dt}} = \sum_{r=1}^{R}{\lambda_{r} \cdot \mathcal{N}_{r}}
+\end{equation}
+kde:
+\begin{tabbing}
+    \hspace{0.75cm} \= \kill
+    $A$\> = Celková aktivita aktivačního detektoru. \\
+    $A_{r}$\> = Aktivita \glslink{radionuklid}{radionuklidu}, který je produkte reakce $r$. \\
+    $R$\> = Počet radionuklidů v aktivačním detektoru. \\
+    $\mathcal{N}$\> = Počet jader radionuklidu $r$ v aktivačním detektoru. \\
+    $\lambda_{r}$\> = Rozpadová konstanta radionuklidu $r$. \\
+    $t$\> = Čas. \\
+\end{tabbing}
+
+Ze vztahu (\ref{rov301}) je zřejmé, že velikost aktivity aktivačního detektoru je ovlivněna počtem jader daného radionuklidu v aktivačním detektoru a rychlostí s jakou se dané radionuklidy rozpadají. Čas za který se rozpadne polovina těchto radionuklidů se nazývá poločas rozpadu $T_{1/2}$. Mezi poločasem rozpadu $T_{1/2}$ a rozpadovou konstantou $\lambda$ je následující vztah
+
+\begin{equation}
+    \label{rov302}
+    \lambda = \frac{ln(2)}{T_{1/2}}
+\end{equation}
+kde:
+\begin{tabbing}
+    \hspace{0.75cm} \= \kill
+    $\lambda$\> = Rozpadová konstanta. \\
+    $T_{1/2}$\> = Poločas rozpadu. \\
+\end{tabbing}
+
+Stojí za zmínku, že není možné určit, které atomy daného \glslink{radionuklid}{radionuklidu} ve vzorku se rozpadnou v který čas, ale je pozorovatelným faktem, že za jednotku času se jich rozpadne určité procento. Poločas rozpadu $T_{1/2}$ byl vytvořen jako míra rychlosti rozpadu radionuklidů, protože rozpadá-li se každý časový okamžik určité procento z aktuálního počtu atomů radionuklidu ve vzorku a toto procento zůstává konstantní pro celou dobu rozpadu, tak rozpad všech těchto jader trvá nekonečně dlouho. 
+
+Nejpoužívanější jednotkou aktivity je Becquerel (Bq). Aktivita o hodnotě 1 Bq znamená, že v aktivačním detektoru dojde k jedné přeměně atomového jádra za vteřinu. Další poměrně často používanou jednotkou aktivity je Curie (Ci). Platí, že aktivita 1 Ci je ekvivalentní aktivitě $3,7 \cdot 10^{10}$ Bq.
+
+\subsection{APG}
+Protože celková aktivita daného \glslink{radionuklid}{radionuklidu} v aktivačním detektoru je veličina, se kterou se nadále obtížně pracuje (složité porovnání aktivit mezi různými aktivačními detektory, obtížné dosazování do vzorců, ...), tak se aktivita normuje. Nejzjevnějším způsobem, jak aktivitu normovat je na jednotku hmotnosti aktivačního detektoru. Za tímto účelem se zavádí veličina $APG$ (Activity per  gram), která je definována jako celková aktivita dělená hmotností aktivačního detektoru v gramech.
+
+\begin{equation}
+    \label{rov303}
+    APG = \frac{A}{m_{det}}
+\end{equation}
+kde:
+\begin{tabbing}
+    \hspace{1.0cm} \= \kill
+    $APG$\> = Aktivita daného \glslink{radionuklid}{radionuklidu} vztažená na $1\,g$ aktivačního detektoru. \\
+    $A$\> = Aktivita daného \glslink{radionuklid}{radionuklidu} v celém aktivačním detektoru. \\
+    $m_{det}$\> = Hmotnost celého aktivačního detektoru. \\
+\end{tabbing}
+
+\subsection{APN}
+Dalším často používaným způsobem, jak normovat celkovou aktivitu daného \glslink{radionuklid}{radionuklidu} v aktivačním detektoru je na počet atomů terčového nuklidu obsažených v aktivačním detektoru. Terčový nuklid je nuklid na kterém dochází ke sledované reakci. Jak bylo zmíněno v kapitole \ref{kap_detektory}, aktivační detektor může být složen z více různých nuklidů a sledována je zpravidla reakce pouze na jednom z nich (i když je samozřejmě možné sledovat reakcí více).
+
+\begin{equation}
+    \label{rov304}
+    APN = \frac{A}{\mathcal{N}_{t}}
+\end{equation}
+kde:
+\begin{tabbing}
+    \hspace{1.0cm} \= \kill
+    $APN$\> = Aktivita daného \glslink{radionuklid}{radionuklidu} vztažená na počet jader terčového \glslink{nuklid}{nuklidu}. \\
+    $A$\> = Aktivita daného \glslink{radionuklid}{radionuklidu} v celém aktivačním detektoru. \\
+    $\mathcal{N}_{t}$\> = Počet jader terčového \glslink{nuklid}{nuklidu} v celém aktivačním detektoru. \\
+\end{tabbing}
+
+Izotopické změny v průběhu ozařování jsou zpravidla zanedbávány a je uvažováno složení aktivačního detektoru před zahájením ozařování.
