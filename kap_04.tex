@@ -1,0 +1,73 @@
+\section{Reakční rychlost}
+Jak bylo zmíněno v předchozí kapitole je aktivita počet rozpadů daného radionuklidu za jednotku času. Tyto radionuklidy ale mohly vzniknout nekonečným počtem způsobů. Pro stanovení spektra neutronů, kterým byl aktivační detektor ozářen, má \gls{aktivita}, ať už vztažená na jádro nebo na hmotnost, velmi omezenou vypovídací hodnotu. Nicméně je možné pomocí aktivity stanovit reakční rychlost, která již vypovídací hodnotu má.
+
+Reakční rychlost vyjadřuje, ke kolika reakcím daného typu dojde za jednotku času a je definována následovně
+\begin{equation}
+    \label{rov401}
+    RR = \int\displaylimits_{V}\int\displaylimits_{0}^{\infty} \Phi(E,\vec{x}) \cdot \Sigma(E,\vec{x}) \: dE dV
+\end{equation}
+kde:
+\begin{tabbing}
+    \phantom{$D_{n50}\ $}\= \kill
+    $RR$\> = Reakční rychlost v \acr{AD}. \\
+    $\Phi$\> = Hustota toku neutronů. \\
+    $\Sigma$\> = Makroskopický účinný průřez. \\
+    $E$\> = Kinetická energie neutronu. \\
+    $V$\> = Objem aktivačního detektoru. \\
+    $\vec{x}$\> = Polohový vektor v objemu aktivačního detektoru. \\
+\end{tabbing}
+
+Protože v praxi se pracuje s grupovými veličinami, tak bývá rovnice (\ref{rov401}) diskretizována následujícím způsobem
+\begin{equation}
+    \label{rov402}
+    RR = V \cdot \sum_{g=1}^{G} \Phi_g \cdot \Sigma_g
+\end{equation}
+kde:
+\begin{tabbing}
+    \phantom{$D_{n50}\ $}\= \kill
+    $RR$\> = Reakční rychlost. \\
+    $\Phi_g$\> = Integrální hustota toku neutronů v energetické grupě $g$. \\
+    $\Sigma_g$\> = Makroskopický účinný průřez v energetické grupě $g$. \\
+    $g$\> = Číslo energetické \glslink{grupa}{grupy}. \\
+    $G$\> = Počet energetických \glslink{grupa}{grup}. \\
+    $V$\> = Objem aktivačního detektoru. \\
+\end{tabbing}
+
+Objem $V$ v rovnici (\ref{rov402}) vyjadřuje objem celého \acr{AD} a je předpokládáno, že atomová hustota terčových jader a hustota toku neutronů je konstantní v celém tomto objemu. 
+
+Je zřejmé, že na rozdíl od \glslink{aktivita}{aktivity} je reakční rychlost veličina, která je nenulová pouze během ozařování \acr{AD}.
+
+\subsection{RR vztažená na počet terčových jader}
+Z praktických důvodů je $RR$ často vztahována na počet jader terčového nuklidu v aktivačním detektoru před ozářením. Takto normovaná $RR$ je definovaná následovně 
+\begin{equation}
+    \label{rov403}
+    \tilde{RR} = \frac{\int\displaylimits_{V}\int\displaylimits_{0}^{\infty} \Phi(E,\vec{x}) \cdot \sigma(E) \cdot N_t(\vec{x}) \: dE dV}{\int\displaylimits_{V}N_t(\vec{x}) \: dV}
+\end{equation}
+kde:
+\begin{tabbing}
+    \phantom{$D_{n50}\ $}\= \kill
+    $\tilde{RR}$\> = Reakční rychlost vztažená na počet terčových jader v \acr{AD}. \\
+    $\Phi$\> = Hustota toku neutronů. \\
+    $\sigma$\> = Mikroskopický účinný průřez. \\
+    $N_t$\> = Atomová hustota terčových jader v \acr{AD}. \\
+    $E$\> = Kinetická energie neutronu. \\
+    $V$\> = Objem aktivačního detektoru. \\
+    $\vec{x}$\> = Polohový vektor v objemu \acr{AD}. \\
+\end{tabbing}
+
+\begin{equation}
+    \label{rov404}
+    \tilde{RR} = \frac{RR}{N_t \cdot V} = \sum_{g=1}^{G} \Phi_g \cdot \sigma_g
+\end{equation}
+kde:
+\begin{tabbing}
+    \phantom{$D_{n50}\ $}\= \kill
+    $\tilde{RR}$\> = Reakční rychlost vztažená na počet terčových jader v \acr{AD}. \\
+    $RR$\> = Reakční rychlost. \\
+    $N_t$\> = Atomová hustota terčových jader v \acr{AD}. \\
+    $V$\> = Objem aktivačního detektoru. \\
+    $\Phi_g$\> = Integrální hustota toku neutronů v energetické grupě $g$. \\
+    $\sigma_g$\> = Mikroskopický účinný průřez v energetické grupě $g$. \\
+    $g$\> = Číslo energetické \glslink{grupa}{grupy}. \\
+    $G$\> = Počet energetických \glslink{grupa}{grup}. \\
+\end{tabbing}
